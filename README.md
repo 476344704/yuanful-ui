@@ -5,7 +5,7 @@
 ![yuanful-wx-plugins](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
-## 插件安装
+## 插件安装
 在`app.json`中配置插件的引入
 ```json
 {
@@ -26,9 +26,10 @@
 
 
 
-### 城市选择列表 `city-index-list`
 <details>
-<summary>查看</summary>
+<summary id="城市选择列表-city-index-list">
+  城市选择列表 `city-index-list`
+</summary>
 
 
 #### 属性
@@ -87,4 +88,4 @@ page.json
 }
 ```
 
-<details>
+</details>
