@@ -32,61 +32,65 @@
   城市选择列表 `city-index-list`
 </summary>
 
+  #### 预览
+  <div>
+    <img width="60%" src="preview/city-index-list.png" alt="yuanful-wx-plugins" />
+  </div>
 
-#### 属性
-名称 | 类型 | 默认 | 描述
---- | --- | --- | ---
-theme   | String  | `green`     | 插件主题，目前有：`orange`、`red`、`blue`、`green`
-styles  | Object  | `{}`        | 插件自定义样式，支持：`letterBarBackground` 字母索引背景色、`letterColor` 字母默认颜色、`letterActiveColor` 字母选中的颜色、`closerBackground` 关闭按钮背景
-visible | Boolean | `false`     | 是否显示
+  #### 属性
+  名称 | 类型 | 默认 | 描述
+  --- | --- | --- | ---
+  theme   | String  | `green`     | 插件主题，目前有：`orange`、`red`、`blue`、`green`
+  styles  | Object  | `{}`        | 插件自定义样式，支持：`letterBarBackground` 字母索引背景色、`letterColor` 字母默认颜色、`letterActiveColor` 字母选中的颜色、`closerBackground` 关闭按钮背景
+  visible | Boolean | `false`     | 是否显示
 
-#### 事件
-名称 | 参数 | 描述
---- | --- | ---
-onselect  | `event` | `event.detail` 为选择的城市数据，包括：`name` 城市名、`code` 城市编码
+  #### 事件
+  名称 | 参数 | 描述
+  --- | --- | ---
+  onselect  | `event` | `event.detail` 为选择的城市数据，包括：`name` 城市名、`code` 城市编码
 
-#### 使用
-page.wxml
-```html
-<city-index-list
-    theme="orange"
-    visible="{{cityVisible}}"
-    styles="{{cityStyles}}"
-    bind:onselect="onSelectCity"
-/>
+  #### 使用
+  page.wxml
+  ```html
+  <city-index-list
+      theme="orange"
+      visible="{{cityVisible}}"
+      styles="{{cityStyles}}"
+      bind:onselect="onSelectCity"
+  />
 
-<button bindtap="onClickBtn">显示</button>
-```
+  <button bindtap="onClickBtn">显示</button>
+  ```
 
-page.js
-```javascript
-Page({
-    data: {
-        cityVisible: false,
-        cityStyles: {
-            letterColor: '#fff'
-        }
-    },
-    onClickBtn(){
-        this.setData({
-            cityVisible: true
-        });
-    },
-    onSelectCity(e){
-        let detail = e.detail;
+  page.js
+  ```javascript
+  Page({
+      data: {
+          cityVisible: false,
+          cityStyles: {
+              letterColor: '#fff'
+          }
+      },
+      onClickBtn(){
+          this.setData({
+              cityVisible: true
+          });
+      },
+      onSelectCity(e){
+          let detail = e.detail;
 
-        console.log(detail);
+          console.log(detail);
+      }
+  });
+  ```
+
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "city-index-list": "plugin://YuanFul/city-index-list"
     }
-});
-```
-
-page.json
-```json
-{
-  "usingComponents": {
-    "city-index-list": "plugin://YuanFul/city-index-list"
   }
-}
-```
+  ```
 
 </details>
