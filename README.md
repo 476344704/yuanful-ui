@@ -34,7 +34,7 @@
 
   #### 预览
   <div>
-    <img width="60%" src="preview/city-index-list.png" alt="yuanful-wx-plugins" />
+    <img width="40%" src="preview/city-index-list.png" alt="yuanful-wx-plugins" />
   </div>
 
   #### 属性
