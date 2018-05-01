@@ -32,24 +32,24 @@
   城市选择列表 `city-index-list`
 </summary>
 
-  ## 预览
+  ### 预览
   <div>
     <img width="40%" src="preview/city-index-list.png" alt="yuanful-wx-plugins" />
   </div>
 
-  ## 属性
+  ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
   theme   | String  | `green`     | 插件主题，目前有：`orange`颜色值`#f19149`、`red`颜色值`#f44336`、`blue`颜色值`#03a9f4`、`green`颜色值`#009688`
   styles  | Object  | `{}`        | 插件自定义样式，支持：`letterBarBackground` 字母索引背景色、`letterColor` 字母默认颜色、`letterActiveColor` 字母选中的颜色、`closerBackground` 关闭按钮背景
   visible | Boolean | `false`     | 是否显示
 
-  ## 事件
+  ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
   onselect  | `event` | `event.detail` 为选择的城市数据，包括：`name` 城市名、`code` 城市编码
 
-  ## 使用
+  ### 使用
   page.wxml
   ```html
   <city-index-list
