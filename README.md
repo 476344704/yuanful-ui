@@ -1,28 +1,12 @@
 # wx-plugins
 
-微信小程序插件说明文档
+**wx-plugins**是一套可添加到小程序内直接使用的功能组件，无需重复开发，为用户提供更丰富的服务。
 
-[![License][https://img.shields.io/badge/license-MIT-blue.svg]][https://opensource.org/licenses/mit-license.php]
-
-
-## 城市列表`city-index-list`
-
-### 属性
-名称 | 类型 | 默认 | 描述
---- | --- | --- | ---
-theme   | String  | `green`     | 插件主题
-styles  | Object  | `{}`        | 插件自定义样式，支持：`letterBarBackground` 字母索引背景色、`letterColor` 字母默认颜色、`letterActiveColor` 字母选中的颜色、`closerBackground` 关闭按钮背景
-visible | Boolean | `false`     | 是否显示
+![yuanful-wx-plugins](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
-### 事件
-名称 | 参数 | 描述
---- | --- | ---
-onselect  | `event` | `event.detail` 为选择的城市数据，包括：`name` 城市名、`code` 城市编码
-
-
-### 使用示例
-注意：要先在`app.json`中配置插件的引入，然后在配置
+## 插件安装
+在`app.json`中配置插件的引入
 ```json
 {
   "pages": [
@@ -36,12 +20,34 @@ onselect  | `event` | `event.detail` 为选择的城市数据，包括：`name` 
   }
 }
 ```
+
+## 插件目录
+* [城市选择列表 `city-index-list`](#城市选择列表city-index-list)
+
+
+
+### 城市选择列表 `city-index-list`
+
+#### 属性
+名称 | 类型 | 默认 | 描述
+--- | --- | --- | ---
+theme   | String  | `green`     | 插件主题，目前有：`orange`、`red`、`blue`、`green`
+styles  | Object  | `{}`        | 插件自定义样式，支持：`letterBarBackground` 字母索引背景色、`letterColor` 字母默认颜色、`letterActiveColor` 字母选中的颜色、`closerBackground` 关闭按钮背景
+visible | Boolean | `false`     | 是否显示
+
+#### 事件
+名称 | 参数 | 描述
+--- | --- | ---
+onselect  | `event` | `event.detail` 为选择的城市数据，包括：`name` 城市名、`code` 城市编码
+
+#### 使用
 page.wxml
 ```html
 <city-index-list
-    visible="{{cityVisible}}"
-    bind:onselect="onSelectCity"
     theme="orange"
+    visible="{{cityVisible}}"
+    styles="{{cityStyles}}"
+    bind:onselect="onSelectCity"
 />
 
 <button bindtap="onClickBtn">显示</button>
@@ -51,7 +57,10 @@ page.js
 ```javascript
 Page({
     data: {
-        cityVisible: false
+        cityVisible: false,
+        cityStyles: {
+            letterColor: '#fff'
+        }
     },
     onClickBtn(){
         this.setData({
