@@ -22,16 +22,19 @@
 ```
 
 ## 插件目录
-* [城市选择列表 `city-index-list`](#城市选择列表city-index-list)
+* [城市选择列表 `city-index-list`](#城市选择列表-city-index-list)
 
 
 
 ### 城市选择列表 `city-index-list`
+<details>
+<summary>查看</summary>
+
 
 #### 属性
 名称 | 类型 | 默认 | 描述
 --- | --- | --- | ---
-theme   | String  | `green`     | 插件主题，目前有：`orange`、`red`、`blue`、`green`
+theme   | String  | `green`     | 插件主题，目前有：`orange`、`red`、`blue`、`green`
 styles  | Object  | `{}`        | 插件自定义样式，支持：`letterBarBackground` 字母索引背景色、`letterColor` 字母默认颜色、`letterActiveColor` 字母选中的颜色、`closerBackground` 关闭按钮背景
 visible | Boolean | `false`     | 是否显示
 
@@ -83,3 +86,5 @@ page.json
   }
 }
 ```
+
+<details>
