@@ -29,10 +29,10 @@
 
 ## 插件说明
 #### 插件主题颜色值
-* <i style="width:10px;height:10px;display:inline-block;background:#03a9f4"></i> blue `#03a9f4`
-* <i style="width:10px;height:10px;display:inline-block;background:#f19149"></i> orange `#f19149`
-* <i style="width:10px;height:10px;display:inline-block;background:#f44336"></i> red `#f44336`
-* <i style="width:10px;height:10px;display:inline-block;background:#009688"></i> green `#009688`
+<p><i style="width:10px;height:10px;display:inline-block;background:#03a9f4"></i> blue <code>#03a9f4</code></p>
+<p><i style="width:10px;height:10px;display:inline-block;background:#f19149"></i> orange <code>#f19149</code></p>
+<p><i style="width:10px;height:10px;display:inline-block;background:#f44336"></i> red <code>#f44336</code></p>
+<p><i style="width:10px;height:10px;display:inline-block;background:#009688"></i> green <code>#009688</code></p>
 
 <details>
 <summary id="city-index-list">
