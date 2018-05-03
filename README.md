@@ -28,11 +28,11 @@
 
 
 ## 插件说明
-### 插件主题统一的颜色值如下
-* blue `#03a9f4`
-* orange `#f19149`
-* red `#f44336`
-* green `#009688`
+#### 插件主题颜色值
+* <i style="width:10px;height:10px;display:inline-block;background:#03a9f4"></i> blue `#03a9f4`
+* <i style="width:10px;height:10px;display:inline-block;background:#f19149"></i> orange `#f19149`
+* <i style="width:10px;height:10px;display:inline-block;background:#f44336"></i> red `#f44336`
+* <i style="width:10px;height:10px;display:inline-block;background:#009688"></i> green `#009688`
 
 <details>
 <summary id="city-index-list">
