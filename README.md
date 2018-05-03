@@ -99,7 +99,7 @@
     }
   }
   ```
-<br>[⬆ 返回目录](#插件目录)
+<br/>[⬆ 返回目录](#插件目录)
 </details>
 
 
@@ -119,14 +119,14 @@
   theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
   visible | Boolean | `false`     | 是否显示
   placeholder | String | `请输入关键字`     | 输入框默认占位文字
-  searchValue | String | ``     | 输入框默认值，默认为空
-  clearConfirm | Boolean | `true`     | 点击清空是否弹出二次确认框
-  confirmConfig | Object | `{ content: '确定要清空吗？' }`     | 清空时二次确认弹窗配置，与`wx.showModal`参数一致
+  search-value | String | ``     | 输入框默认值，默认为空
+  clear-confirm | Boolean | `true`     | 点击清空是否弹出二次确认框
+  confirm-config | Object | `{ content: '确定要清空吗？' }`     | 清空时二次确认弹窗配置，与`wx.showModal`参数一致
 
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  search  | `event` | 搜索的回调，`event.detail` 为选择的城市数据，包括：`text` 搜索的文字
+  search  | `event` | 搜索的回调，`event.detail.text` 为搜索的文字
   cancel  | `event` | 取消的回调
 
   ### 使用
@@ -134,6 +134,9 @@
   ```html
   <searchbar
     visible="{{searchbarVisible}}"
+    search-value="测试"
+    confirm-config="{{confirmConfig}}"
+    clear-confirm="{{true}}"
     bind:search="onSearch"
   />
 
@@ -144,7 +147,9 @@
   ```javascript
     Page({
       data: {
-
+        confirmConfig: {
+          content: '确定要清空内容吗？'
+        }
       },
       onClickBtn() {
           this.setData({
@@ -168,5 +173,5 @@
   }
   ```
 
-<br>[⬆ 返回目录](#插件目录)
+<br/>[⬆ 返回目录](#插件目录)
 </details>
