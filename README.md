@@ -23,10 +23,17 @@
 
 ## 插件目录
 * [城市选择列表 `city-index-list`](#城市选择列表-city-index-list)
+* [搜索组件 `searchbar`](#搜索组件-searchbar)
 
 
 
 ## 插件说明
+### 插件主题统一的颜色值如下
+* blue `#03a9f4`
+* orange `#f19149`
+* red `#f44336`
+* green `#009688`
+
 <details>
 <summary id="城市选择列表-city-index-list">
   城市选择列表 `city-index-list`
@@ -34,20 +41,20 @@
 
   ### 预览
   <div>
-    <img width="40%" src="preview/city-index-list.png" alt="yuanful-wx-plugins" />
+    <img width="40%" src="preview/city-index-list.png" />
   </div>
 
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
-  theme   | String  | `green`     | 插件主题，目前有：`orange`颜色值`#f19149`、`red`颜色值`#f44336`、`blue`颜色值`#03a9f4`、`green`颜色值`#009688`
-  styles  | Object  | `{}`        | 插件自定义样式，支持：`letterBarBackground` 字母索引背景色、`letterColor` 字母默认颜色、`letterActiveColor` 字母选中的颜色、`closerBackground` 关闭按钮背景
+  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  styles  | Object  | `{}`        | 插件自定义样式<br/>支持：`letterBarBackground` 字母索引背景色、`letterColor` 字母默认颜色、`letterActiveColor` 字母选中的颜色、`closerBackground` 关闭按钮背景
   visible | Boolean | `false`     | 是否显示
 
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  onselect  | `event` | `event.detail` 为选择的城市数据，包括：`name` 城市名、`code` 城市编码
+  select  | `event` | 选择城市的回调，`event.detail` 为选择的城市数据，包括：`name` 城市名、`code` 城市编码
 
   ### 使用
   page.wxml
@@ -56,10 +63,10 @@
       theme="orange"
       visible="{{cityVisible}}"
       styles="{{cityStyles}}"
-      bind:onselect="onSelectCity"
+      bind:select="onSelectCity"
   />
 
-  <button bindtap="onClickBtn">显示</button>
+  <button bind:tap="onClickBtn">显示</button>
   ```
 
   page.js
@@ -89,6 +96,74 @@
   {
     "usingComponents": {
       "city-index-list": "plugin://YuanFul/city-index-list"
+    }
+  }
+  ```
+
+</details>
+
+
+<details>
+<summary id="搜索组件-searchbar">
+  搜索组件 `searchbar`
+</summary>
+
+  ### 预览
+  <div>
+    <img width="40%" src="preview/searchbar.png" />
+  </div>
+
+  ### 属性
+  名称 | 类型 | 默认 | 描述
+  --- | --- | --- | ---
+  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  visible | Boolean | `false`     | 是否显示
+  placeholder | String | `请输入关键字`     | 输入框默认占位文字
+  searchValue | String | ``     | 输入框默认值，默认为空
+  clearConfirm | Boolean | `true`     | 点击清空是否弹出二次确认框
+  confirmConfig | Object | `{ content: '确定要清空吗？' }`     | 清空时二次确认弹窗配置，与`wx.showModal`参数一致
+
+  ### 事件
+  名称 | 参数 | 描述
+  --- | --- | ---
+  search  | `event` | 搜索的回调，`event.detail` 为选择的城市数据，包括：`text` 搜索的文字
+  cancel  | `event` | 取消的回调
+
+  ### 使用
+  page.wxml
+  ```html
+  <searchbar
+    visible="{{searchbarVisible}}"
+    bind:search="onSearch"
+  />
+
+  <button bind:tap="onClickBtn">显示</button>
+  ```
+
+  page.js
+  ```javascript
+    Page({
+      data: {
+
+      },
+      onClickBtn() {
+          this.setData({
+              searchbarVisible: true
+          });
+      },
+      onSearch(e) {
+          let detail = e.detail;
+
+          console.log(detail);
+      }
+  })
+  ```
+
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "searchbar": "plugin://YuanFul/searchbar"
     }
   }
   ```
