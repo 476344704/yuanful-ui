@@ -29,14 +29,14 @@
 
 ## 插件说明
 #### 插件主题颜色值
-<p><i style="width:10px;height:10px;display:inline-block;background:#03a9f4"></i> blue <code>#03a9f4</code></p>
-<p><i style="width:10px;height:10px;display:inline-block;background:#f19149"></i> orange <code>#f19149</code></p>
-<p><i style="width:10px;height:10px;display:inline-block;background:#f44336"></i> red <code>#f44336</code></p>
-<p><i style="width:10px;height:10px;display:inline-block;background:#009688"></i> green <code>#009688</code></p>
+* <img width="10px" height="10px" src="theme/blue.png" /> blue `#03a9f4`
+* <img width="10px" height="10px" src="theme/orange.png" /> orange `#f19149`
+* <img width="10px" height="10px" src="theme/red.png" /> red `#f44336`
+* <img width="10px" height="10px" src="theme/green.png" /> green `#009688`
 
 <details>
 <summary id="city-index-list">
-  城市选择列表 `city-index-list`
+城市选择列表 `city-index-list`
 </summary>
 
   ### 预览
