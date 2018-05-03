@@ -134,7 +134,7 @@
   ```html
   <searchbar
     visible="{{searchbarVisible}}"
-    search-value="测试"
+    search-value="测试"
     confirm-config="{{confirmConfig}}"
     clear-confirm="{{true}}"
     bind:search="onSearch"
