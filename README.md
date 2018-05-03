@@ -22,8 +22,8 @@
 ```
 
 ## 插件目录
-* [城市选择列表 `city-index-list`](#城市选择列表-city-index-list)
-* [搜索组件 `searchbar`](#搜索组件-searchbar)
+* [城市选择列表 `city-index-list`](#city-index-list)
+* [搜索组件 `searchbar`](#searchbar)
 
 
 
@@ -35,7 +35,7 @@
 * green `#009688`
 
 <details>
-<summary id="城市选择列表-city-index-list">
+<summary id="city-index-list">
   城市选择列表 `city-index-list`
 </summary>
 
@@ -104,7 +104,7 @@
 
 
 <details>
-<summary id="搜索组件-searchbar">
+<summary id="searchbar">
   搜索组件 `searchbar`
 </summary>
 
