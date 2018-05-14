@@ -1,11 +1,10 @@
 # wx-plugins
 
 <div align="center">
-  <img width="360" src="images/logo.png" alt="wx-plugins" />
-  <br>
-
-  <p><strong>wx-plugins是一套可添加到小程序内直接使用的功能组件，无需重复开发，为用户提供更丰富的服务。</strong></p>
+  <img width="160" src="images/logo.png" alt="wx-plugins" />
 </div>
+
+**wx-plugins**是一套可添加到小程序内直接使用的功能组件，无需重复开发，为用户提供更丰富的服务。
 
 ## 联系方式
 * 邮箱：org.java.tango@gmail.com
