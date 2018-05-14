@@ -14,6 +14,7 @@
 
 
 ## 插件安装
+<img width="90%" src="images/guide.png" alt="wx-plugins" />
 在`app.json`中配置插件的引入
 ```json
 {
@@ -67,6 +68,15 @@
   select  | `event` | 选择城市的回调，`event.detail` 为选择的城市数据，包括：`name` 城市名、`code` 城市编码
 
   ### 使用
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "city-index-list": "plugin://YuanFul/city-index-list"
+    }
+  }
+  ```
+
   page.wxml
   ```html
   <city-index-list
@@ -100,15 +110,6 @@
       }
   });
   ```
-
-  page.json
-  ```json
-  {
-    "usingComponents": {
-      "city-index-list": "plugin://YuanFul/city-index-list"
-    }
-  }
-  ```
 <br/>[⬆ 返回目录](#插件目录)
 </details>
 
@@ -140,6 +141,15 @@
   cancel  | `event` | 取消的回调
 
   ### 使用
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "searchbar": "plugin://YuanFul/searchbar"
+    }
+  }
+  ```
+
   page.wxml
   ```html
   <searchbar
@@ -173,15 +183,5 @@
       }
     });
   ```
-
-  page.json
-  ```json
-  {
-    "usingComponents": {
-      "searchbar": "plugin://YuanFul/searchbar"
-    }
-  }
-  ```
-
 <br/>[⬆ 返回目录](#插件目录)
 </details>
