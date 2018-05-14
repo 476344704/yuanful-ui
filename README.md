@@ -1,8 +1,16 @@
 # wx-plugins
 
-**wx-plugins**是一套可添加到小程序内直接使用的功能组件，无需重复开发，为用户提供更丰富的服务。
+<div align="center">
+  <img width="360" src="images/logo.png" alt="wx-plugins" />
+  <br>
 
-![yuanful-wx-plugins](https://img.shields.io/badge/license-MIT-blue.svg)
+  <p><strong>wx-plugins是一套可添加到小程序内直接使用的功能组件，无需重复开发，为用户提供更丰富的服务。</strong></p>
+</div>
+
+## 联系方式
+* 邮箱：org.java.tango@gmail.com
+* QQ：278826466
+
 
 
 ## 插件安装
@@ -20,6 +28,8 @@
   }
 }
 ```
+
+
 
 ## 插件目录
 * [城市选择列表 city-index-list](#city-index-list)
