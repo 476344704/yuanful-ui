@@ -4,7 +4,7 @@
   <img width="240" src="images/logo.png" alt="yuanful-ui" />
   <br>
 
-  <p><strong>yuanful-ui是一套可添加到小程序内直接使用的功能组件，无需重复开发，为用户提供更丰富的服务。无需确认，申请后即可添加插件，免费使用。</strong></p>
+  <p>yuanful-ui是一套可添加到小程序内直接使用的功能组件，无需重复开发，为用户提供更丰富的服务。<strong>无需确认，申请后即可添加插件，免费使用。</strong></p>
 </div>
 
 ## 联系方式
@@ -14,11 +14,11 @@
 
 
 ## 插件安装
-### 1. 添加插件
+##### 1. 添加插件
 
 <img width="100%" src="images/guide.png" alt="yuanful-ui" />
 
-### 2. 配置插件
+#### 2. 配置插件
 在`app.json`中配置插件的引入
 
 ```json
