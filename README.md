@@ -14,7 +14,7 @@
 
 
 ## 插件安装
-##### 1. 添加插件
+#### 1. 添加插件
 
 <img width="100%" src="images/guide.png" alt="yuanful-ui" />
 
