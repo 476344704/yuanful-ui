@@ -14,8 +14,11 @@
 
 
 ## 插件安装
+
 <img width="90%" src="images/guide.png" alt="wx-plugins" />
+
 在`app.json`中配置插件的引入
+
 ```json
 {
   "pages": [
