@@ -14,12 +14,11 @@
 
 
 ## 插件安装
-1. 在小程序后台设置里面添加插件
-2. 配置小程序`app.json`文件
-3. 配置页面的`page.json`文件
+### 1. 添加插件
 
 <img width="100%" src="images/guide.png" alt="wx-plugins" />
 
+### 2. 配置插件
 在`app.json`中配置插件的引入
 
 ```json
