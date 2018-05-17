@@ -8,8 +8,8 @@
   <p>yuanful-ui是一套可添加到小程序内直接使用的功能组件，无需重复开发，为用户提供更丰富的服务。<strong>无需确认，申请后即可添加插件，免费使用。</strong></p>
 </div>
 
-## 说明
-* 插件目录中标注了`下个版本`的文字，表示此版本无法使用，下个版本将会出现
+## 备注
+* 插件目录中标注了`下个版本`的文字，表示此版本无法使用，下个版本将会出现
 * 如果您有什么问题，欢迎提到[issues](https://github.com/yuanful/yuanful-ui/issues)，或者通过以下方式咨询联系
 
 
@@ -47,8 +47,8 @@
 ## 插件目录
 * [城市选择列表 city-index-list](#city-index-list)
 * [搜索组件 searchbar](#searchbar)
-* [日历选择 calendar](#calendar)（下个版本）
-* [浮动按钮 float-button](#float-button)（下个版本）
+* [日历选择 calendar](#calendar)（下个版本）
+* [浮动按钮 float-button](#float-button)（下个版版本）
 
 
 
@@ -144,7 +144,7 @@
   theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
   visible | Boolean | `false`     | 是否显示
   placeholder | String | `请输入关键字`     | 输入框默认占位文字
-  search-value | String | ``     | 输入框默认值，默认为空
+  search-value | String | ''     | 输入框默认值，默认为空
   clear-confirm | Boolean | `true`     | 点击清空是否弹出二次确认框
   confirm-config | Object | `{ content: '确定要清空吗？' }`     | 清空时二次确认弹窗配置，与`wx.showModal`参数一致
 
@@ -216,8 +216,8 @@
   --- | --- | --- | ---
   theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
   visible | Boolean | `false`     | 是否显示
-  start-date | String | ``     | 开始日期
-  end-date | String | ``     | 结束日期
+  start-date | String | ''     | 开始日期，必填
+  end-date | String | ''     | 结束日期，必填
 
   ### 事件
   名称 | 参数 | 描述
