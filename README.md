@@ -4,12 +4,13 @@
   <img width="240" src="images/logo.png" alt="yuanful-ui" />
   <br>
 
-  <p><strong>持续更新中</strong></p>
+  <p><strong>当前版本：1.0.1，持续更新中</strong></p>
   <p>yuanful-ui是一套可添加到小程序内直接使用的功能组件，无需重复开发，为用户提供更丰富的服务。<strong>无需确认，申请后即可添加插件，免费使用。</strong></p>
 </div>
 
 ## 备注
-* 插件目录中标注了`下个版本`的文字，表示此版本无法使用，下个版本将会出现
+* 插件目录如果标注了`预览版`字样，则表示此组件正在审核
+* 请使用最新的版本插件，以保证获得最全的插件
 * 如果您有什么问题，欢迎提到[issues](https://github.com/yuanful/yuanful-ui/issues)，或者通过以下方式咨询联系
 
 
@@ -46,9 +47,9 @@
 
 ## 插件目录
 * [城市选择列表 city-index-list](#city-index-list)
-* [搜索组件 searchbar](#searchbar)
-* [日历选择 calendar](#calendar)（下个版本）
-* [浮动按钮 float-button](#float-button)（下个版版本）
+* [搜索框 searchbar](#searchbar)
+* [日历选择 calendar](#calendar)（预览版）
+* [浮动按钮 float-button](#float-button)（预览版）
 
 
 
@@ -130,7 +131,7 @@
 
 <details>
 <summary id="searchbar">
-  搜索组件 searchbar
+  搜索框 searchbar
 </summary>
 
   ### 预览
