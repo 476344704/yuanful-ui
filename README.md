@@ -4,8 +4,14 @@
   <img width="240" src="images/logo.png" alt="yuanful-ui" />
   <br>
 
+  <p><strong>持续更新中</strong></p>
   <p>yuanful-ui是一套可添加到小程序内直接使用的功能组件，无需重复开发，为用户提供更丰富的服务。<strong>无需确认，申请后即可添加插件，免费使用。</strong></p>
 </div>
+
+## 说明
+* 插件目录中标注了`下个版本`的文字，表示此版本无法使用，下个版本将会出现
+* 如果您有什么问题，欢迎提到[issues](https://github.com/yuanful/yuanful-ui/issues)，或者通过以下方式咨询联系
+
 
 ## 联系方式
 * 邮箱：org.java.tango@gmail.com
@@ -41,6 +47,8 @@
 ## 插件目录
 * [城市选择列表 city-index-list](#city-index-list)
 * [搜索组件 searchbar](#searchbar)
+* [日历选择 calendar](#calendar)（下个版本）
+* [浮动按钮 float-button](#float-button)（下个版本）
 
 
 
@@ -172,22 +180,150 @@
   page.js
   ```javascript
     Page({
-      data: {
+        data: {
         confirmConfig: {
-          content: '确定要清空内容吗？'
+            content: '确定要清空内容吗？'
         }
-      },
-      onClickBtn() {
-          this.setData({
-              searchbarVisible: true
-          });
-      },
-      onSearch(e) {
-          let detail = e.detail;
+        },
+        onClickBtn() {
+            this.setData({
+                searchbarVisible: true
+            });
+        },
+        onSearch(e) {
+            let detail = e.detail;
 
-          console.log(detail);
-      }
+            console.log(detail);
+        }
     });
+  ```
+<br/>[⬆ 返回目录](#插件目录)
+</details>
+
+
+<details>
+<summary id="calendar">
+  日历选择 calendar
+</summary>
+
+  ### 预览
+  <div>
+    <img width="40%" src="preview/calendar.png" />
+  </div>
+
+  ### 属性
+  名称 | 类型 | 默认 | 描述
+  --- | --- | --- | ---
+  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  visible | Boolean | `false`     | 是否显示
+  start-date | String | ``     | 开始日期
+  end-date | String | ``     | 结束日期
+
+  ### 事件
+  名称 | 参数 | 描述
+  --- | --- | ---
+  change  | `event` | 选中日期的回调，`event.detail.currentDate` 为选中的日期
+
+  ### 使用
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "calendar": "plugin://YuanFul/calendar"
+    }
+  }
+  ```
+
+  page.wxml
+  ```html
+    <calendar
+        visible="{{calendarVisible}}"
+        start-date="2017-07-07"
+        end-date="2018-08-08"
+        bind:change="onChangeDate"
+    />
+
+    <button bind:tap="onClickBtn">显示</button>
+  ```
+
+  page.js
+  ```javascript
+    Page({
+        data: {
+            calendarVisible: false
+        },
+        onLoad() {
+
+        },
+        onClickBtn() {
+            this.setData({
+                calendarVisible: true
+            });
+        },
+        onChangeDate(e) {
+            let detail = e.detail;
+
+            console.log(detail);
+        }
+    });
+  ```
+<br/>[⬆ 返回目录](#插件目录)
+</details>
+
+
+<details>
+<summary id="float-button">
+  浮动按钮 float-button
+</summary>
+
+  ### 预览
+  <div>
+    <img width="40%" src="preview/float-button.png" />
+    <img width="40%" src="preview/float-button_active.png" />
+  </div>
+
+  ### 属性
+  名称 | 类型 | 默认 | 描述
+  --- | --- | --- | ---
+  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  visible | Boolean | `true`     | 是否显示，默认显示
+  src | String | `[如图-左]`     | 默认图片
+  active-src | String | `[如图-右]`     | 点击之后的图片
+
+  ### 事件
+  名称 | 参数 | 描述
+  --- | --- | ---
+  tapfloat  | `event` | 选中日期的回调，`event.detail.open` 开关状态
+
+  ### 使用
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "float-button": "plugin://YuanFul/float-button"
+    }
+  }
+  ```
+
+  page.wxml
+  ```html
+    <float-button
+        bind:tapfloat="onTapBtn"
+    />
+  ```
+
+  page.js
+  ```javascript
+    Page({
+        data: {
+
+        },
+        onTapBtn(e) {
+            let detail = e.detail;
+
+            console.log(detail);
+        }
+    })
   ```
 <br/>[⬆ 返回目录](#插件目录)
 </details>
