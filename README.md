@@ -350,7 +350,7 @@
   list | Array | `[]`     | 菜单配置
   elem-rect | Object | `{}`     | 元素的坐标信息
   page-rect | Object | `{}`     | 页面的坐标信息
-  dir | String | `auto`     | 箭头方位，默认自动计算，如果传入的方位不支持，那么使用默认第一个支持的<br/>可选值`tl tc tr rt rc rb bl bc br lt lc lb`，分别代表上右下左中，组合而成的12个方位：<br/>`tl` 对应 `top-left`<br/>`tc` 对应 `top-center`<br/>`tr` 对应 `top-right`<br/>`rt` 对应 `right-top`<br/>`rc` 对应 `right-center`<br/>`rb` 对应 `right-bottom`<br/>`bl` 对应 `bottom-left`<br/>`bc` 对应 `bottom-center`<br/>`br` 对应 `bottom-right`<br/>`lt` 对应 `left-top`<br/>`lc` 对应 `left-center`<br/>`lb` 对应 `left-bottom`
+  dir | String | `auto`     | 箭头方位，默认自动计算<br/>如果传入的方位不支持，那么使用默认第一个支持的<br/>可选值`tl tc tr rt rc rb bl bc br lt lc lb`<br/>分别代表上右下左中，组合而成的12个方位：<br/>`tl` 对应 `top-left`<br/>`tc` 对应 `top-center`<br/>`tr` 对应 `top-right`<br/>`rt` 对应 `right-top`<br/>`rc` 对应 `right-center`<br/>`rb` 对应 `right-bottom`<br/>`bl` 对应 `bottom-left`<br/>`bc` 对应 `bottom-center`<br/>`br` 对应 `bottom-right`<br/>`lt` 对应 `left-top`<br/>`lc` 对应 `left-center`<br/>`lb` 对应 `left-bottom`
 
   ### 事件
   名称 | 参数 | 描述
