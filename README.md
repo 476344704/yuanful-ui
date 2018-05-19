@@ -356,7 +356,7 @@
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  select  | `event` | 选中菜单回调，`event.detail.item` 当前选中的菜单项
+  select  | `event` | 选中菜单的回调，`event.detail.item` 当前选中的菜单项
 
   ### 使用
   page.json
@@ -458,15 +458,16 @@
   content | String | ''     | 文案内容
   animation | Boolean | `true`     | 是否滚动
   show-closer | Boolean | `true`     | 是否显示关闭按钮
-  duration | String | `5s`     | 动画时长
+  font-size | String | `30rpx`     | 文字大小
+  duration | String | `5s`     | 动画时长，与CSS3的`animation-duration`相同
   icon | String | `[如图]`     | 左边图标（图片地址）
   styles | Object | `{}`     | 插件自定义样式，支持：<br/>`backgroundColor` 通告栏背景色<br/>`contentColor` 内容文字颜色<br/>`closerColor` 关闭按钮颜色
 
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  tapbar  | `event` | 点击回调
-  close  | `event` | 关闭回调
+  tapbar  | `event` | 点击的回调
+  close  | `event` | 关闭的回调
 
   ### 使用
   page.json
