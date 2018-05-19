@@ -53,6 +53,7 @@
 * [calendar 日历选择](#calendar)（预览版）
 * [float-button 浮动按钮](#float-button)（预览版）
 * [popover 弹出菜单](#popover)（预览版）
+* [noticebar 通告栏](#noticebar)（预览版）
 
 
 
@@ -433,6 +434,74 @@
             this.setData({
                 visible: true
             });
+        },
+    })
+  ```
+<br/>[⬆ 返回目录](#插件目录)
+</details>
+
+
+<details>
+<summary id="noticebar">
+  noticebar 通告栏
+</summary>
+
+  ### 预览
+  <div>
+    <img width="40%" src="preview/noticebar.png" />
+  </div>
+
+  ### 属性
+  名称 | 类型 | 默认 | 描述
+  --- | --- | --- | ---
+  visible | Boolean | `false`     | 是否显示
+  content | String | ''     | 文案内容
+  animation | Boolean | `true`     | 是否滚动
+  show-closer | Boolean | `true`     | 是否显示关闭按钮
+  duration | String | `5s`     | 动画时长
+  icon | String | `[如图]`     | 左边图标（图片地址）
+  styles | Object | `{}`     | 插件自定义样式<br/>支持：`backgroundColor` 通告栏背景色、`contentColor` 内容文字颜色、`closerColor` 关闭按钮颜色
+
+  ### 事件
+  名称 | 参数 | 描述
+  --- | --- | ---
+  tapbar  | `event` | 点击回调
+  close  | `event` | 关闭回调
+
+  ### 使用
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "noticebar": "plugin://YuanFul/noticebar"
+    }
+  }
+  ```
+
+  page.wxml
+  ```html
+    <noticebar
+        content="{{content}}"
+        show-closer="{{showCloser}}"
+        styles="{{styles}}"
+        bind:tapbar="onTapBar"
+    />
+  ```
+
+  page.js
+  ```javascript
+    Page({
+        data: {
+            showCloser: true,
+            content: '这是一个跑马灯效果，一直移动哦，哈哈哈，移动移动慢慢移动。',
+            styles: {
+                // backgroundColor: '#eee',
+                // closerColor: 'red',
+                // contentColor: 'red',
+            }
+        },
+        onTapBar() {
+            console.log('tap')
         },
     })
   ```
