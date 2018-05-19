@@ -78,7 +78,7 @@
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
   theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
-  styles  | Object  | `{}`        | 插件自定义样式<br/>支持：`letterBarBackground` 字母索引背景色、`letterColor` 字母默认颜色、`letterActiveColor` 字母选中的颜色、`closerBackground` 关闭按钮背景
+  styles  | Object  | `{}`        | 插件自定义样式，支持：<br/>`letterBarBackground` 字母索引背景色<br/>`letterColor` 字母默认颜色<br/>`letterActiveColor` 字母选中的颜色<br/>`closerBackground` 关闭按钮背景
   visible | Boolean | `false`     | 是否显示
 
   ### 事件
@@ -448,7 +448,7 @@
 
   ### 预览
   <div>
-    <img width="40%" src="preview/noticebar.png" />
+    <img width="40%" src="preview/noticebar.gif" />
   </div>
 
   ### 属性
@@ -460,7 +460,7 @@
   show-closer | Boolean | `true`     | 是否显示关闭按钮
   duration | String | `5s`     | 动画时长
   icon | String | `[如图]`     | 左边图标（图片地址）
-  styles | Object | `{}`     | 插件自定义样式<br/>支持：`backgroundColor` 通告栏背景色、`contentColor` 内容文字颜色、`closerColor` 关闭按钮颜色
+  styles | Object | `{}`     | 插件自定义样式，支持：<br/>`backgroundColor` 通告栏背景色<br/>`contentColor` 内容文字颜色<br/>`closerColor` 关闭按钮颜色
 
   ### 事件
   名称 | 参数 | 描述
