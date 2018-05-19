@@ -52,7 +52,7 @@
 * [searchbar 搜索框](#searchbar)
 * [calendar 日历选择](#calendar)（预览版）
 * [float-button 浮动按钮](#float-button)（预览版）
-* [popover 弹窗菜单](#popover)（预览版）
+* [popover 弹出菜单](#popover)（预览版）
 
 
 
@@ -350,7 +350,7 @@
   list | Array | `[]`     | 菜单配置
   elem-rect | Object | `{}`     | 元素的坐标信息
   page-rect | Object | `{}`     | 页面的坐标信息
-  dir | String | `auto`     | 箭头方向，默认自动计算<br/>可选值tl tc tr rt rc rb bl bc br lt lc lb，分别代表上右下左中，组合而成的12个方位<br/>tl 对应 top-left<br/>tc 对应 top-center<br/>tr 对应 top-right<br/>rt 对应 right-top<br/>rc 对应 right-center<br/>rb 对应 right-bottom<br/>bl 对应 bottom-left<br/>bc 对应 bottom-center<br/>br 对应 bottom-right<br/>lt 对应 left-top<br/>lc 对应 left-center<br/>lb 对应 left-bottom
+  dir | String | `auto`     | 箭头方位，默认自动计算，如果传入的方位不支持，那么使用默认第一个支持的<br/>可选值`tl tc tr rt rc rb bl bc br lt lc lb`，分别代表上右下左中，组合而成的12个方位：<br/>`tl` 对应 `top-left`<br/>`tc` 对应 `top-center`<br/>`tr` 对应 `top-right`<br/>`rt` 对应 `right-top`<br/>`rc` 对应 `right-center`<br/>`rb` 对应 `right-bottom`<br/>`bl` 对应 `bottom-left`<br/>`bc` 对应 `bottom-center`<br/>`br` 对应 `bottom-right`<br/>`lt` 对应 `left-top`<br/>`lc` 对应 `left-center`<br/>`lb` 对应 `left-bottom`
 
   ### 事件
   名称 | 参数 | 描述
@@ -384,8 +384,8 @@
   ```
 
   page.js
-  
-  每个页面必须调用下面的`initPopover`方法。`elemSelector`就是按钮的选择器，`pageSelector`就是页面最外层的选择器。并设置组件的属性`elem-rect`、`page-rect`
+
+  **注意：** 每个页面必须调用下面的`initPopover`方法。`elemSelector`就是按钮的选择器，`pageSelector`就是页面最外层的选择器。并设置组件的属性`elem-rect`、`page-rect`
   ```javascript
     Page({
         data: {
