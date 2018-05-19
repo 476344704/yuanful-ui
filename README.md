@@ -48,10 +48,11 @@
 
 
 ## 插件目录
-* [城市选择列表 city-index-list](#city-index-list)
-* [搜索框 searchbar](#searchbar)
-* [日历选择 calendar](#calendar)（预览版）
-* [浮动按钮 float-button](#float-button)（预览版）
+* [city-index-list 城市选择列表](#city-index-list)
+* [searchbar 搜索框](#searchbar)
+* [calendar 日历选择](#calendar)（预览版）
+* [float-button 浮动按钮](#float-button)（预览版）
+* [popover 弹窗菜单](#popover)（预览版）
 
 
 
@@ -64,7 +65,7 @@
 
 <details>
 <summary id="city-index-list">
-城市选择列表 city-index-list
+  city-index-list 城市选择列表
 </summary>
 
   ### 预览
@@ -133,7 +134,7 @@
 
 <details>
 <summary id="searchbar">
-  搜索框 searchbar
+  searchbar 搜索框
 </summary>
 
   ### 预览
@@ -206,7 +207,7 @@
 
 <details>
 <summary id="calendar">
-  日历选择 calendar
+  calendar 日历选择
 </summary>
 
   ### 预览
@@ -276,7 +277,7 @@
 
 <details>
 <summary id="float-button">
-  浮动按钮 float-button
+  float-button 浮动按钮
 </summary>
 
   ### 预览
@@ -326,6 +327,113 @@
 
             console.log(detail);
         }
+    })
+  ```
+<br/>[⬆ 返回目录](#插件目录)
+</details>
+
+
+<details>
+<summary id="popover">
+  popover 弹出菜单
+</summary>
+
+  ### 预览
+  <div>
+    <img width="40%" src="preview/popover.png" />
+  </div>
+
+  ### 属性
+  名称 | 类型 | 默认 | 描述
+  --- | --- | --- | ---
+  visible | Boolean | `false`     | 是否显示
+  list | Array | `[]`     | 菜单配置
+  elem-rect | Object | `{}`     | 元素的坐标信息
+  page-rect | Object | `{}`     | 页面的坐标信息
+  dir | String | `auto`     | 箭头方向，默认自动计算<br/>可选值tl tc tr rt rc rb bl bc br lt lc lb，分别代表上右下左中，组合而成的12个方位<br/>tl 对应 top-left<br/>tc 对应 top-center<br/>tr 对应 top-right<br/>rt 对应 right-top<br/>rc 对应 right-center<br/>rb 对应 right-bottom<br/>bl 对应 bottom-left<br/>bc 对应 bottom-center<br/>br 对应 bottom-right<br/>lt 对应 left-top<br/>lc 对应 left-center<br/>lb 对应 left-bottom
+
+  ### 事件
+  名称 | 参数 | 描述
+  --- | --- | ---
+  select  | `event` | 选中菜单回调，`event.detail.item` 当前选中的菜单项
+
+  ### 使用
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "popover": "plugin://YuanFul/popover"
+    }
+  }
+  ```
+
+  page.wxml
+  ```html
+    <popover
+        dir="tc"
+        list="{{list}}"
+        elem-rect="{{elemRect}}"
+        page-rect="{{pageRect}}"
+        visible="{{visible}}"
+        bind:select="onSelectPopover"
+    />
+
+    <view class=".page">
+        <button id="menuBtn" size="mini" bind:tap="onClickBtn">显示</button>
+    </view>
+  ```
+
+  page.js
+  
+  每个页面必须调用下面的`initPopover`方法。`elemSelector`就是按钮的选择器，`pageSelector`就是页面最外层的选择器。并设置组件的属性`elem-rect`、`page-rect`
+  ```javascript
+    Page({
+        data: {
+            visible: false,
+            list: ['选项1', '选项2', '选项3']
+        },
+        onReady(){
+            this.initPopover();
+        },
+        // 每个页面必须
+        initPopover() {
+            let elemSelector = '#menuBtn';
+            let pageSelector = '.page';
+            
+            wx.createSelectorQuery()
+                .select(elemSelector)
+                .boundingClientRect((res) => {
+                    this.setData({
+                        elemRect: res
+                    });
+                }).exec();
+
+            let getRect = (callback) => {
+                wx.createSelectorQuery()
+                    .select(pageSelector)
+                    .boundingClientRect((rect) => {
+                        if (rect) {
+                            callback(rect);
+                        } else {
+                            setTimeout(() => getRect(callback), 100);
+                        }
+                    }).exec();
+            }
+
+            getRect((res) => {
+                this.setData({
+                    pageRect: res
+                });
+            });
+        },
+        onSelectPopover(event) {
+            console.log(event.detail.item);
+        },
+        onClickBtn() {
+            this.setData({
+                visible: true
+            });
+        },
     })
   ```
 <br/>[⬆ 返回目录](#插件目录)
