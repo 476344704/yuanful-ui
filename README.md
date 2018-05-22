@@ -15,7 +15,7 @@
 * 如果您有什么问题，欢迎提到[issues](https://github.com/yuanful/yuanful-ui/issues)，或者通过以下方式咨询联系
 
 ## 插件预览
-<img width="100%" src="images/preview-qrcode.png" alt="yuanful-ui" />
+<img width="240" src="images/preview-qrcode.png" alt="yuanful-ui" />
 
 
 ## 联系方式
