@@ -11,8 +11,9 @@
 
 ## 备注
 * 插件目录如果标注了`预览版`字样，则表示此版本的插件正在审核
-* 如果您有什么问题，欢迎提到[issues](https://github.com/yuanful/yuanful-ui/issues)，或者通过以下方式咨询联系
+* 如果您有什么问题，欢迎提到[issues](https://github.com/yuanful/yuanful-ui/issues)，或者通过以下方式咨询反馈
 * 如果您喜欢我们的插件，请点击右上角“star” :wink:
+* 请参考案例源码[yuanful-ui-demo](https://github.com/yuanful/yuanful-ui-demo)
 
 ## 联系方式
 * 邮箱：org.java.tango@gmail.com
