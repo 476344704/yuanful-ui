@@ -5,7 +5,7 @@
   <br>
 
   <p><strong>当前版本：1.0.2，持续更新中</strong></p>
-  <p>yuanful-ui是一套可添加到小程序内直接使用的功能插件，无需重复开发，为用户提供更丰富的服务。</p>
+  <p>这是一套可添加到小程序内直接使用的功能插件，无需重复开发，为用户提供更丰富的服务。</p>
   <p><strong>无需确认，申请后即可添加插件，免费使用。</strong></p>
 </div>
 
@@ -13,6 +13,7 @@
 * 插件目录如果标注了`预览版`字样，则表示此版本的插件正在审核
 * 请使用最新版本的插件
 * 如果您有什么问题，欢迎提到[issues](https://github.com/yuanful/yuanful-ui/issues)，或者通过以下方式咨询联系
+* 如果您喜欢我们的插件，请点击右上角star :star: :wink:
 
 ## 联系方式
 * 邮箱：org.java.tango@gmail.com
@@ -47,7 +48,7 @@
 
 ## 插件目录
 * [city-index-list 城市选择列表](#city-index-list)
-* [searchbar 搜索框](#searchbar)
+* [searchbar 搜索栏](#searchbar)
 * [calendar 日历选择](#calendar)
 * [float-button 浮动按钮](#float-button)
 * [popover 弹出菜单](#popover)
@@ -64,10 +65,10 @@
 
 <details>
 <summary id="city-index-list">
-  city-index-list 城市选择列表
+  city-index-list 城市选择列表（最低支持版本v1.0.1）
 </summary>
 
-  ### 预览
+  ### 预览（最低支持版本v1.0.1）
   <div>
     <img width="40%" src="preview/city-index-list.png" />
   </div>
@@ -133,7 +134,7 @@
 
 <details>
 <summary id="searchbar">
-  searchbar 搜索框
+  searchbar 搜索栏（最低支持版本v1.0.1）
 </summary>
 
   ### 预览
@@ -206,7 +207,7 @@
 
 <details>
 <summary id="calendar">
-  calendar 日历选择
+  calendar 日历选择（最低支持版本v1.0.2）
 </summary>
 
   ### 预览
@@ -276,7 +277,7 @@
 
 <details>
 <summary id="float-button">
-  float-button 浮动按钮
+  float-button 浮动按钮（最低支持版本v1.0.2）
 </summary>
 
   ### 预览
@@ -334,7 +335,7 @@
 
 <details>
 <summary id="popover">
-  popover 弹出菜单
+  popover 弹出菜单（最低支持版本v1.0.2）
 </summary>
 
   ### 预览
@@ -441,7 +442,7 @@
 
 <details>
 <summary id="noticebar">
-  noticebar 通告栏
+  noticebar 通告栏（最低支持版本v1.0.2）
 </summary>
 
   ### 预览
