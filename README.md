@@ -14,10 +14,6 @@
 * 请使用最新版本的插件
 * 如果您有什么问题，欢迎提到[issues](https://github.com/yuanful/yuanful-ui/issues)，或者通过以下方式咨询联系
 
-## 插件预览
-<img width="240" src="images/preview-qrcode.png" alt="yuanful-ui" />
-
-
 ## 联系方式
 * 邮箱：org.java.tango@gmail.com
 * QQ：278826466
