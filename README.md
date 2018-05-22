@@ -13,7 +13,7 @@
 * 插件目录如果标注了`预览版`字样，则表示此版本的插件正在审核
 * 请使用最新版本的插件
 * 如果您有什么问题，欢迎提到[issues](https://github.com/yuanful/yuanful-ui/issues)，或者通过以下方式咨询联系
-* 如果您喜欢我们的插件，请点击右上角star :star: :wink:
+* 如果您喜欢我们的插件，请点击右上角“star” :wink:
 
 ## 联系方式
 * 邮箱：org.java.tango@gmail.com
@@ -65,10 +65,10 @@
 
 <details>
 <summary id="city-index-list">
-  city-index-list 城市选择列表（最低支持版本v1.0.1）
+  city-index-list 城市选择列表（v1.0.1）
 </summary>
 
-  ### 预览（最低支持版本v1.0.1）
+  ### 预览
   <div>
     <img width="40%" src="preview/city-index-list.png" />
   </div>
@@ -134,7 +134,7 @@
 
 <details>
 <summary id="searchbar">
-  searchbar 搜索栏（最低支持版本v1.0.1）
+  searchbar 搜索栏（v1.0.1）
 </summary>
 
   ### 预览
@@ -207,7 +207,7 @@
 
 <details>
 <summary id="calendar">
-  calendar 日历选择（最低支持版本v1.0.2）
+  calendar 日历选择（v1.0.2）
 </summary>
 
   ### 预览
@@ -277,7 +277,7 @@
 
 <details>
 <summary id="float-button">
-  float-button 浮动按钮（最低支持版本v1.0.2）
+  float-button 浮动按钮（v1.0.2）
 </summary>
 
   ### 预览
@@ -335,7 +335,7 @@
 
 <details>
 <summary id="popover">
-  popover 弹出菜单（最低支持版本v1.0.2）
+  popover 弹出菜单（v1.0.2）
 </summary>
 
   ### 预览
@@ -442,7 +442,7 @@
 
 <details>
 <summary id="noticebar">
-  noticebar 通告栏（最低支持版本v1.0.2）
+  noticebar 通告栏（v1.0.2）
 </summary>
 
   ### 预览
