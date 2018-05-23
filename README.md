@@ -22,6 +22,11 @@
 
 
 
+## 插件预览
+<img width="300" src="images/preview-qrcode.png" alt="yuanful-ui" />
+
+
+
 ## 插件安装
 #### 1. 添加插件
 
