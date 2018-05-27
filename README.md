@@ -71,13 +71,13 @@
 * <img width="10px" height="10px" src="theme/orange.png" /> orange `#f19149`
 * <img width="10px" height="10px" src="theme/red.png" /> red `#f44336`
 * <img width="10px" height="10px" src="theme/green.png" /> green `#009688`
-* <img width="10px" height="10px" src="theme/deep-red.png" /> green `#BC2221`
-* <img width="10px" height="10px" src="theme/deep-blue.png" /> green `#2d527c`
-* <img width="10px" height="10px" src="theme/sea-blue.png" /> green `#005EB8`
-* <img width="10px" height="10px" src="theme/black.png" /> green `#101820`
-* <img width="10px" height="10px" src="theme/gray.png" /> green `#53565A`
-* <img width="10px" height="10px" src="theme/cyan.png" /> green `#23B3D2`
-* <img width="10px" height="10px" src="theme/purple.png" /> green `#464E7E`
+* <img width="10px" height="10px" src="theme/deep-red.png" /> deep-red `#BC2221`
+* <img width="10px" height="10px" src="theme/deep-blue.png" /> deep-blue `#2d527c`
+* <img width="10px" height="10px" src="theme/sea-blue.png" /> sea-blue `#005EB8`
+* <img width="10px" height="10px" src="theme/black.png" /> black `#101820`
+* <img width="10px" height="10px" src="theme/gray.png" /> gray `#53565A`
+* <img width="10px" height="10px" src="theme/cyan.png" /> cyan `#23B3D2`
+* <img width="10px" height="10px" src="theme/purple.png" /> purple `#464E7E`
 
 <details>
 <summary id="city-index-list">
