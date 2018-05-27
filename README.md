@@ -539,8 +539,7 @@
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  tapicon  | `event` | 点击图标的事件，`event.detail.icon` 为点击的图标类型
-
+  tapicon  | `event` | 点击图标的事件，`event.detail.icon`为点击图标的类型
   ### 使用
   page.json
   ```json
@@ -587,10 +586,10 @@
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
   theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
-  themetype | String | `border`     | 风格，`border`边框类型、`background`类型
-  vertical | Boolean | `false`     | 是否垂直显示
-  list | Array | `[]`     | 标题配置
-  active-index | Number | `0`     | 默认激活位置
+  themetype | String | `border`     | 风格，支持`border`、`background`两种类型（如图）
+  vertical | Boolean | `false`     | 是否是垂直
+  list | Array | `[]`     | 标题配置
+  active-index | Number | `0`     | 默认激活位置
 
   ### 事件
   名称 | 参数 | 描述
@@ -638,14 +637,14 @@
 
   ### 预览
   <div>
-    <img width="40%" src="preview/loading.png" />
+    <img width="40%" src="preview/loading.gif" />
   </div>
 
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
   theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
-  visible | Boolean | `true`     | 是否显示
+  visible | Boolean | `true`     | 是否显示
   type | String | `default`     | 加载动画类型
   modal | Boolean | `false`     | 是否是遮罩类型
 
@@ -685,12 +684,12 @@
   theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
   slotname | String | `accordion`     | 手风琴`slot`的名称前缀
   list | Array | `[]`     | 标题配置
-  active-index | Number | `-1`     | 默认展开的索引（-1表示默认不展开）
+  active-index | Number | `-1`     | 默认展开的索引（-1表示默认不展开）
 
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  change  | `event` | 点击图标的事件，`event.detail.activeIndex` 为展开的索引
+  change  | `event` | 点击图标的事件，`event.detail.activeIndex` 为展开的索引
 
   ### 使用
   page.json
