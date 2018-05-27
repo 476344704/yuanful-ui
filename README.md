@@ -58,7 +58,7 @@
 * [float-button 浮动按钮](#float-button)
 * [popover 弹出菜单](#popover)
 * [noticebar 通告栏](#noticebar)
-* [icon 图标](#icon)（预览版）
+* [ico 图标](#ico)（预览版）
 * [tabs 标签页](#tabs)（预览版）
 * [loading 加载](#loading)（预览版）
 * [accordion 手风琴](#accordion)（预览版）
@@ -462,14 +462,15 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
+  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
   visible | Boolean | `false`     | 是否显示
   content | String | ''     | 文案内容
   animation | Boolean | `true`     | 是否滚动
   show-closer | Boolean | `true`     | 是否显示关闭按钮
   font-size | String | `30rpx`     | 文字大小
   duration | String | `5s`     | 动画时长，与CSS3的`animation-duration`相同
-  icon | String | `[如图]`     | 左边图标（图片地址）
-  styles | Object | `{}`     | 插件自定义样式，支持：<br/>`backgroundColor` 通告栏背景色<br/>`contentColor` 内容文字颜色<br/>`closerColor` 关闭按钮颜色
+  icon | String | `tixing`     | 参考组件`ico`
+  styles | Object | `{}`     | 插件自定义样式，支持：<br/>`backgroundColor` 通告栏背景色<br/>`contentColor` 内容文字颜色<br/>`closerColor` 关闭按钮颜色<br/>`iconColor` 图标颜色
 
   ### 事件
   名称 | 参数 | 描述
@@ -519,51 +520,54 @@
 
 
 <details>
-<summary id="icon">
-  icon 图标 <code>>= v1.0.3</code>
+<summary id="ico">
+  ico 图标 <code>>= v1.0.3</code>
 </summary>
 
   ### 预览
   <div>
     <img width="40%" src="preview/icon.png" />
+    <img width="40%" src="preview/icon2.png" />
+    <img width="40%" src="preview/icon3.png" />
+    <img width="40%" src="preview/icon4.png" />
   </div>
 
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
   theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
-  icon | String | ''     | 图标类型
+  ico | String | ''     | 图标类型，参考上图种类
   size | String | `40rpx`     | 图标大小
   color | String | ''     | 图标颜色，默认theme主题色
 
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  tapicon  | `event` | 点击图标的事件，`event.detail.icon`为点击图标的类型
+  tapico  | `event` | 点击图标的事件，`event.detail.ico`为点击图标的类型
   ### 使用
   page.json
   ```json
   {
     "usingComponents": {
-      "yf-icon": "plugin://YuanFul/icon"
+      "ico": "plugin://YuanFul/ico"
     }
   }
   ```
 
   page.wxml
   ```html
-    <yf-icon
+    <ico
         theme="deep-blue"
-        icon="shouye"
+        ico="shouye"
         size="50rpx"
-        bind:tapicon="tapicon"
+        bind:tapico="tapico"
     />
   ```
 
   page.js
   ```javascript
     Page({
-        tapicon(event){
+        tapico(event){
             console.log(event.detail)
         }
     })
@@ -580,6 +584,7 @@
   ### 预览
   <div>
     <img width="40%" src="preview/tabs.png" />
+    <img width="40%" src="preview/tabs-vertical.png" />
   </div>
 
   ### 属性
@@ -588,8 +593,10 @@
   theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
   themetype | String | `border`     | 风格，支持`border`、`background`两种类型（如图）
   vertical | Boolean | `false`     | 是否是垂直
-  list | Array | `[]`     | 标题配置
+  slotname | String | `tabs`     | 内容`slot`的名称前缀
+  option | Array | `[]`     | 标题配置
   active-index | Number | `0`     | 默认激活位置
+  styles | Object | `{}`     | 插件自定义样式，支持：<br/>`color` 文字颜色<br/>`fontSize` 文字大小<br/>`background` 背景色<br/>`border` 边框
 
   ### 事件
   名称 | 参数 | 描述
@@ -609,17 +616,21 @@
   page.wxml
   ```html
     <tabs
-        theme="deep-blue"
-        list="{{ list }}"
+        option="{{ option }}"
         bind:change="onTabChange"
-    />
+        active-index="activeIndex"
+    >
+        <view slot="tabs0">内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1</view>
+        <view slot="tabs1">内容2内容2内容2内容2内容2</view>
+        <view slot="tabs2">内容3</view>
+    </tabs> 
   ```
 
   page.js
   ```javascript
     Page({
         data: {
-            list: ['选项1', '选项2', '选项3'],
+            option: ['选项1', '选项2', '选项3'],
         },
         onTabChange(event) {
             console.log(event.detail)
@@ -643,9 +654,8 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
-  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
   visible | Boolean | `true`     | 是否显示
-  type | String | `default`     | 加载动画类型
+  type | String | `default`     | 加载动画类型，支持：`default`、`cube`、`pulse`、`knock`、`fade-circle`、`rotate`
   modal | Boolean | `false`     | 是否是遮罩类型
 
   ### 使用
@@ -682,8 +692,8 @@
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
   theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
-  slotname | String | `accordion`     | 手风琴`slot`的名称前缀
-  list | Array | `[]`     | 标题配置
+  slotname | String | `accordion`     | 内容`slot`的名称前缀
+  option | Array | `[]`     | 标题配置
   active-index | Number | `-1`     | 默认展开的索引（-1表示默认不展开）
 
   ### 事件
@@ -705,7 +715,7 @@
   ```html
     <accordion
         theme="deep-blue"
-        list="{{list}}"
+        option="{{option}}"
         bind:change="onChangeDate"
     >
         <view slot="accordion0">内容1</view>
@@ -718,7 +728,7 @@
   ```javascript
     Page({
         data: {
-            list: [
+            option: [
                 '标题1',
                 '标题22',
                 '标题333',
