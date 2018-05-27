@@ -58,6 +58,10 @@
 * [float-button 浮动按钮](#float-button)
 * [popover 弹出菜单](#popover)
 * [noticebar 通告栏](#noticebar)
+* [icon 图标](#icon)（预览版）
+* [tabs 标签页](#tabs)（预览版）
+* [loading 加载](#loading)（预览版）
+* [accordion 手风琴](#accordion)（预览版）
 
 
 
@@ -509,6 +513,227 @@
             console.log('tap')
         },
     })
+  ```
+<br/>[⬆ 返回目录](#插件目录)
+</details>
+
+
+<details>
+<summary id="icon">
+  icon 图标 <code>>= v1.0.3</code>
+</summary>
+
+  ### 预览
+  <div>
+    <img width="40%" src="preview/icon.png" />
+  </div>
+
+  ### 属性
+  名称 | 类型 | 默认 | 描述
+  --- | --- | --- | ---
+  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  icon | String | ''     | 图标类型
+  size | String | `40rpx`     | 图标大小
+  color | String | ''     | 图标颜色，默认theme主题色
+
+  ### 事件
+  名称 | 参数 | 描述
+  --- | --- | ---
+  tapicon  | `event` | 点击图标的事件，`event.detail.icon` 为点击的图标类型
+
+  ### 使用
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "yf-icon": "plugin://YuanFul/icon"
+    }
+  }
+  ```
+
+  page.wxml
+  ```html
+    <yf-icon
+        theme="deep-blue"
+        icon="shouye"
+        size="50rpx"
+        bind:tapicon="tapicon"
+    />
+  ```
+
+  page.js
+  ```javascript
+    Page({
+        tapicon(event){
+            console.log(event.detail)
+        }
+    })
+  ```
+<br/>[⬆ 返回目录](#插件目录)
+</details>
+
+
+<details>
+<summary id="tabs">
+  tabs 标签页 <code>>= v1.0.3</code>
+</summary>
+
+  ### 预览
+  <div>
+    <img width="40%" src="preview/tabs.png" />
+  </div>
+
+  ### 属性
+  名称 | 类型 | 默认 | 描述
+  --- | --- | --- | ---
+  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  themetype | String | `border`     | 风格，`border`边框类型、`background`类型
+  vertical | Boolean | `false`     | 是否垂直显示
+  list | Array | `[]`     | 标题配置
+  active-index | Number | `0`     | 默认激活位置
+
+  ### 事件
+  名称 | 参数 | 描述
+  --- | --- | ---
+  change  | `event` | 切换标签的事件，`event.detail.activeIndex` 为选择的索引
+
+  ### 使用
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "tabs": "plugin://YuanFul/tabs"
+    }
+  }
+  ```
+
+  page.wxml
+  ```html
+    <tabs
+        theme="deep-blue"
+        list="{{ list }}"
+        bind:change="onTabChange"
+    />
+  ```
+
+  page.js
+  ```javascript
+    Page({
+        data: {
+            list: ['选项1', '选项2', '选项3'],
+        },
+        onTabChange(event) {
+            console.log(event.detail)
+        }
+    })
+  ```
+<br/>[⬆ 返回目录](#插件目录)
+</details>
+
+
+<details>
+<summary id="loading">
+  loading 加载 <code>>= v1.0.3</code>
+</summary>
+
+  ### 预览
+  <div>
+    <img width="40%" src="preview/loading.png" />
+  </div>
+
+  ### 属性
+  名称 | 类型 | 默认 | 描述
+  --- | --- | --- | ---
+  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  visible | Boolean | `true`     | 是否显示
+  type | String | `default`     | 加载动画类型
+  modal | Boolean | `false`     | 是否是遮罩类型
+
+  ### 使用
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "loading": "plugin://YuanFul/loading"
+    }
+  }
+  ```
+
+  page.wxml
+  ```html
+    <loading
+        type="default"
+    />
+  ```
+<br/>[⬆ 返回目录](#插件目录)
+</details>
+
+
+<details>
+<summary id="accordion">
+  accordion 图标 <code>>= v1.0.3</code>
+</summary>
+
+  ### 预览
+  <div>
+    <img width="40%" src="preview/accordion.png" />
+  </div>
+
+  ### 属性
+  名称 | 类型 | 默认 | 描述
+  --- | --- | --- | ---
+  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  slotname | String | `accordion`     | 手风琴`slot`的名称前缀
+  list | Array | `[]`     | 标题配置
+  active-index | Number | `-1`     | 默认展开的索引（-1表示默认不展开）
+
+  ### 事件
+  名称 | 参数 | 描述
+  --- | --- | ---
+  change  | `event` | 点击图标的事件，`event.detail.activeIndex` 为展开的索引
+
+  ### 使用
+  page.json
+  ```json
+  {
+    "usingComponents": {
+      "accordion": "plugin://YuanFul/accordion"
+    }
+  }
+  ```
+
+  page.wxml
+  ```html
+    <accordion
+        theme="deep-blue"
+        list="{{list}}"
+        bind:change="onChangeDate"
+    >
+        <view slot="accordion0">内容1</view>
+        <view slot="accordion1">内容2</view>
+        <view slot="accordion2">内容3</view>
+    </accordion>
+  ```
+
+  page.js
+  ```javascript
+    Page({
+        data: {
+            list: [
+                '标题1',
+                '标题22',
+                '标题333',
+            ]
+        },
+        onChangeDate(e) {
+            let detail = e.detail;
+
+            console.log(detail);
+            this.setData({
+                result: detail.currentDate
+            });
+        }
+    });
   ```
 <br/>[⬆ 返回目录](#插件目录)
 </details>
