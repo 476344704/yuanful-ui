@@ -539,7 +539,7 @@
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  tapicon  | `event` | 点击图标的事件，`event.detail.icon`为点击图标的类型
+  tapicon  | `event` | 点击图标的事件，`event.detail.icon`为点击图标的类型
   ### 使用
   page.json
   ```json
@@ -670,7 +670,7 @@
 
 <details>
 <summary id="accordion">
-  accordion 图标 <code>>= v1.0.3</code>
+  accordion 手风琴 <code>>= v1.0.3</code>
 </summary>
 
   ### 预览
@@ -689,7 +689,7 @@
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  change  | `event` | 点击图标的事件，`event.detail.activeIndex` 为展开的索引
+  change  | `event` | 展开的事件，`event.detail.activeIndex` 为展开的索引
 
   ### 使用
   page.json
