@@ -71,6 +71,13 @@
 * <img width="10px" height="10px" src="theme/orange.png" /> orange `#f19149`
 * <img width="10px" height="10px" src="theme/red.png" /> red `#f44336`
 * <img width="10px" height="10px" src="theme/green.png" /> green `#009688`
+* <img width="10px" height="10px" src="theme/deep-red.png" /> green `#BC2221`
+* <img width="10px" height="10px" src="theme/deep-blue.png" /> green `#2d527c`
+* <img width="10px" height="10px" src="theme/sea-blue.png" /> green `#005EB8`
+* <img width="10px" height="10px" src="theme/black.png" /> green `#101820`
+* <img width="10px" height="10px" src="theme/gray.png" /> green `#53565A`
+* <img width="10px" height="10px" src="theme/cyan.png" /> green `#23B3D2`
+* <img width="10px" height="10px" src="theme/purple.png" /> green `#464E7E`
 
 <details>
 <summary id="city-index-list">
@@ -85,7 +92,7 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
-  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
   styles  | Object  | `{}`        | 插件自定义样式，支持：<br/>`letterBarBackground` 字母索引背景色<br/>`letterColor` 字母默认颜色<br/>`letterActiveColor` 字母选中的颜色<br/>`closerBackground` 关闭按钮背景
   visible | Boolean | `false`     | 是否显示
 
@@ -154,7 +161,7 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
-  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
   visible | Boolean | `false`     | 是否显示
   placeholder | String | `请输入关键字`     | 输入框默认占位文字
   search-value | String | ''     | 输入框默认值，默认为空
@@ -227,7 +234,7 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
-  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
   visible | Boolean | `false`     | 是否显示
   start-date | String | ''     | 开始日期，必填
   end-date | String | ''     | 结束日期，必填
@@ -298,7 +305,7 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
-  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
   visible | Boolean | `true`     | 是否显示，默认显示
   src | String | `[如图-左]`     | 默认图片
   active-src | String | `[如图-右]`     | 点击之后的图片
@@ -462,7 +469,7 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
-  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
   visible | Boolean | `false`     | 是否显示
   content | String | ''     | 文案内容
   animation | Boolean | `true`     | 是否滚动
@@ -535,15 +542,15 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
-  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
-  ico | String | ''     | 图标类型，参考上图种类
+  theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
+  icon | String | ''     | 图标类型，参考上图种类
   size | String | `40rpx`     | 图标大小
   color | String | ''     | 图标颜色，默认theme主题色
 
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  tapico  | `event` | 点击图标的事件，`event.detail.ico`为点击图标的类型
+  tapico  | `event` | 点击图标的事件，`event.detail.icon`为点击图标的类型
   ### 使用
   page.json
   ```json
@@ -558,7 +565,7 @@
   ```html
     <ico
         theme="deep-blue"
-        ico="shouye"
+        icon="shouye"
         size="50rpx"
         bind:tapico="tapico"
     />
@@ -590,13 +597,13 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
-  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
   themetype | String | `border`     | 风格，支持`border`、`background`两种类型（如图）
   vertical | Boolean | `false`     | 是否是垂直
   slotname | String | `tabs`     | 内容`slot`的名称前缀
   option | Array | `[]`     | 标题配置
   active-index | Number | `0`     | 默认激活位置
-  styles | Object | `{}`     | 插件自定义样式，支持：<br/>`color` 文字颜色<br/>`fontSize` 文字大小<br/>`background` 背景色<br/>`border` 边框
+  styles | Object | `{}`     | 插件自定义样式，支持：<br/>`color` 文字颜色<br/>`fontSize` 文字大小<br/>`backgroundColor` 背景色<br/>`border` 边框
 
   ### 事件
   名称 | 参数 | 描述
@@ -654,9 +661,10 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
+  theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
   visible | Boolean | `true`     | 是否显示
   type | String | `default`     | 加载动画类型，支持：`default`、`cube`、`pulse`、`knock`、`fade-circle`、`rotate`
-  modal | Boolean | `false`     | 是否是遮罩类型
+  modal | Boolean | `false`     | 是否是模态
 
   ### 使用
   page.json
@@ -691,10 +699,11 @@
   ### 属性
   名称 | 类型 | 默认 | 描述
   --- | --- | --- | ---
-  theme   | String  | `blue`     | 插件主题<br/>支持：`orange`、`red`、`blue`、`green`
+  theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
   slotname | String | `accordion`     | 内容`slot`的名称前缀
   option | Array | `[]`     | 标题配置
   active-index | Number | `-1`     | 默认展开的索引（-1表示默认不展开）
+  styles | Object | `{}`     | 插件自定义样式，支持：<br/>`color` 文字颜色<br/>`fontSize` 文字大小<br/>`backgroundColor` 背景色
 
   ### 事件
   名称 | 参数 | 描述
