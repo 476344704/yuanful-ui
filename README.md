@@ -163,6 +163,7 @@
   --- | --- | --- | ---
   theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
   visible | Boolean | `false`     | 是否显示
+  static | Boolean | `false`     | 是否静态展示
   placeholder | String | `请输入关键字`     | 输入框默认占位文字
   search-value | String | ''     | 输入框默认值，默认为空
   clear-confirm | Boolean | `true`     | 点击清空是否弹出二次确认框
