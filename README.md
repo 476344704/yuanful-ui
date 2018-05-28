@@ -167,12 +167,14 @@
   search-value | String | ''     | 输入框默认值，默认为空
   clear-confirm | Boolean | `true`     | 点击清空是否弹出二次确认框
   confirm-config | Object | `{ content: '确定要清空吗？' }`     | 清空时二次确认弹窗配置，与`wx.showModal`参数一致
+  icon | String | `search`     | 参考组件`ico`
+  styles | Object | `{}`     | 插件自定义样式，支持：<br/>`searchIconColor` 搜索图标颜色(默认`#ddd`)<br/>`clearIconColor` 清除图标颜色(默认`#ddd`)
 
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
   search  | `event` | 搜索的回调，`event.detail.text` 为搜索的文字
-  cancel  | `event` | 取消的回调
+  clear  | `event` | 清空历史的回调
 
   ### 使用
   page.json
@@ -599,16 +601,18 @@
   --- | --- | --- | ---
   theme   | String  | `blue`     | 插件主题，参考上面`插件主题颜色值`
   themetype | String | `border`     | 风格，支持`border`、`background`两种类型（如图）
-  vertical | Boolean | `false`     | 是否是垂直
   slotname | String | `tabs`     | 内容`slot`的名称前缀
   option | Array | `[]`     | 标题配置
   active-index | Number | `0`     | 默认激活位置
   styles | Object | `{}`     | 插件自定义样式，支持：<br/>`color` 文字颜色<br/>`fontSize` 文字大小<br/>`backgroundColor` 背景色<br/>`border` 边框
+  vertical | Boolean | `false`     | 是否垂直显示（图右）
+  vertical-static | Boolean | `false`     | 是否展示全部内容，当为垂直显示时生效（`vertical=true`），会有滚动选中效果（参考demo）
+  scroll-top | Boolean | `0`     | 页面滚动的位置`scrollTop`，当为垂直显示并且展示全部内容时生效（`vertical=true`，` vertical-static=true`），在页面`onPageScroll`事件设置（参考demo）
 
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  change  | `event` | 切换标签的事件，`event.detail.activeIndex` 为选择的索引
+  change  | `event` | 切换标签的事件，`event.detail.activeIndex` 为选择的索引，`event.detail.scrollTop` 为当前内容需要滚动的高度（当为垂直显示并且展示全部内容时生效，参考demo）
 
   ### 使用
   page.json
