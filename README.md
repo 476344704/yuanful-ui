@@ -614,10 +614,7 @@
   ### 事件
   名称 | 参数 | 描述
   --- | --- | ---
-  change  | `event` | 切换标签的事件，`event.detail.activeIndex` 为选择的索引，`event.detail.scrollTop` 为当前内容需要滚动的高度（当为垂直显示并且展示全部内容时生效，参考demo）
-
-  ### 说明
-  当tabs为垂直显示并且右边区域是全部展示的，且最后一块区域内容小于页面高度，那么滚动到底部就会选中最后一个选项。（参考demo）
+  change  | `event` | 切换标签的事件，`event.detail.activeIndex` 为选择的索引<br/>`event.detail.scrollTop` 设置内容页滚动的高度（垂直显示且展示全部内容时生效，参考demo）
 
   ### 使用
   page.json
