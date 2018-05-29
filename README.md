@@ -731,7 +731,7 @@
     <accordion
         theme="deep-blue"
         option="{{option}}"
-        bind:change="onChangeDate"
+        bind:change="onChange"
     >
         <view slot="accordion0">内容1</view>
         <view slot="accordion1">内容2</view>
@@ -749,13 +749,10 @@
                 '标题333',
             ]
         },
-        onChangeDate(e) {
+        onChange(e) {
             let detail = e.detail;
 
             console.log(detail);
-            this.setData({
-                result: detail.currentDate
-            });
         }
     });
   ```
