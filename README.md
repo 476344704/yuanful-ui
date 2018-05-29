@@ -4,7 +4,7 @@
   <img width="240" src="images/logo.png" alt="yuanful-ui" />
   <br>
 
-  <p><strong>当前版本：1.0.2，持续更新中</strong></p>
+  <p><strong>当前版本：1.0.3，持续更新中</strong></p>
   <p>这是一套可添加到小程序内直接使用的功能插件，无需重复开发，为用户提供更丰富的服务。</p>
   <p><strong>无需确认，申请后即可添加插件，免费使用。</strong></p>
 </div>
@@ -42,7 +42,7 @@
   ],
   "plugins": {
     "YuanFul": {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "provider": "wx2ca7a9c0f8d4e2b9"
     }
   }
@@ -58,10 +58,10 @@
 * [float-button 浮动按钮](#float-button)
 * [popover 弹出菜单](#popover)
 * [noticebar 通告栏](#noticebar)
-* [ico 图标](#ico)（预览版）
-* [tabs 标签页](#tabs)（预览版）
-* [loading 加载](#loading)（预览版）
-* [accordion 手风琴](#accordion)（预览版）
+* [ico 图标](#ico)
+* [tabs 标签页](#tabs)
+* [loading 加载](#loading)
+* [accordion 手风琴](#accordion)
 
 
 
