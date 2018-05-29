@@ -67,12 +67,12 @@
 
 ## 插件说明
 #### 插件主题颜色值
-* <img width="10px" height="10px" src="theme/blue.png" /> blue `#03a9f4`
-* <img width="10px" height="10px" src="theme/orange.png" /> orange `#f19149`
-* <img width="10px" height="10px" src="theme/red.png" /> red `#f44336`
+* <img width="10px" height="10px" src="theme/blue.png" /> blue `#03A9F4`
+* <img width="10px" height="10px" src="theme/orange.png" /> orange `#F19149`
+* <img width="10px" height="10px" src="theme/red.png" /> red `#F44336`
 * <img width="10px" height="10px" src="theme/green.png" /> green `#009688`
 * <img width="10px" height="10px" src="theme/deep-red.png" /> deep-red `#BC2221`
-* <img width="10px" height="10px" src="theme/deep-blue.png" /> deep-blue `#2d527c`
+* <img width="10px" height="10px" src="theme/deep-blue.png" /> deep-blue `#2D527C`
 * <img width="10px" height="10px" src="theme/sea-blue.png" /> sea-blue `#005EB8`
 * <img width="10px" height="10px" src="theme/black.png" /> black `#101820`
 * <img width="10px" height="10px" src="theme/gray.png" /> gray `#53565A`
